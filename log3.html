@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create an Account | Sony Entertainment Network</title>
+    <link rel="shortcut icon" href="/slike/sonyfav.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="s3.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <div id="logo">
+                <img src="slike/sony_logo.png" alt="Sony" id="sony">
+            </div>
+
+            <button id="exit_btn">
+                <img src="slike/x.png" alt="Exit" id="exit">
+            </button>
+        </div>
+
+        <div id="naslov">
+            <h3>Create an Account</h3>
+        </div>
+
+        <div id="prog">
+            <img src="slike/progress_on.png" alt="" class="dot">
+            <img src="slike/progress_on.png" alt="" class="dot">
+            <img src="slike/progress_selected.png" alt="" class="dot">
+            <img src="slike/progress_off.png" alt="" class="dot">
+            <img src="slike/progress_off.png" alt="" class="dot">
+            <img src="slike/progress_off.png" alt="" class="dot">
+        </div>
+
+        <div id="big">
+            <div id="enter">
+                Enter a valid email address and a secure password. We'll send important information to this email address. Your email address is used when you forget your password. Other players won't be able to see it.
+            </div>
+
+            <div id="sign">
+                Sign-In ID <br>
+                <input type="email" class="te" id="email" placeholder="Email Address">
+            </div>
+
+            <div id="pass">
+                Password <br>
+                <input type="password" class="te" id="se" placeholder="Password"> <br> <br>
+                <input type="password" class="te" id="re" placeholder="Re-enter Password">
+            </div>
+
+            <div id="bn">
+                <button id="back">Back</button>
+                <button id="next">Next</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        document.getElementById('next').addEventListener('click', function() {
+            // Get the values from the input fields
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('se').value;
+            const confirmPassword = document.getElementById('re').value;
+
+            // Validate email
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email) || password.trim() === "" || confirmPassword.trim() === "") {
+                // Show SweetAlert if email is invalid or passwords are empty
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Please enter a valid email address and ensure both password fields are filled out!',
+                    confirmButtonText: 'Try Again'
+                });
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Passwords do not match!',
+                    confirmButtonText: 'Try Again'
+                });
+                return;
+            }
+
+            // Navigate to log4.html if validation is successful
+            window.location.href = 'log4.html';
+        });
+
+        document.getElementById('back').addEventListener('click', function() {
+            // Navigate to log2.html
+            window.location.href = 'log2.html';
+        });
+    </script>
+
+</body>
+</html>

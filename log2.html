@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create an Account | Sony Entertainment Network</title>
+    <link rel="shortcut icon" href="/slike/sonyfav.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="s2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <div id="logo">
+                <img src="slike/sony_logo.png" alt="Sony" id="sony">
+            </div>
+
+            <button id="exit_btn">
+                <img src="slike/x.png" alt="Exit" id="exit">
+            </button>
+        </div>
+
+        <div id="naslov">
+            <h3>Create an Account</h3>
+        </div>
+
+        <div id="prog">
+            <img src="slike/progress_on.png" alt="" class="dot">
+            <img src="slike/progress_selected.png" alt="" class="dot">
+            <img src="slike/progress_off.png" alt="" class="dot">
+            <img src="slike/progress_off.png" alt="" class="dot">
+            <img src="slike/progress_off.png" alt="" class="dot">
+            <img src="slike/progress_off.png" alt="" class="dot">
+        </div>
+
+        <div id="big">
+            <div id="desc">
+                Make sure you enter your date of birth correctly. It may be necessary later for security purposes. Other players won't be able to see it.
+            </div>
+              
+            <div id="dmy">
+                <select name="month" id="month" onchange="updateDays();">
+                    <option value="">Month</option>
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+
+                <select name="day" id="day">
+                    <option value="">Day</option>
+                </select>
+        
+                <select name="year" id="year">
+                    <option value="">Year</option>
+                    <script>
+                        const currentYear = new Date().getFullYear();
+                        for (let year = currentYear; year >= 1900; year--) {
+                            document.write(`<option value="${year}">${year}</option>`);
+                        }
+                    </script>
+                </select>
+            </div>
+            <hr style="border: 1px solid lightgray;">
+
+                <div id="about">
+                    About your account information
+                </div>
+
+                <div id="info">
+                    The information you use to create your account needs to be accurate. It will be used to manage and secure your account, and for when you make purchases.
+                </div>
+
+                <div id="bn">
+                    <button id="back">Back</button>
+                    <button id="next">Next</button>
+                </div>
+        </div>
+    </div>
+        
+    <script>
+        function updateDays() {
+            const monthSelect = document.getElementById("month");
+            const daySelect = document.getElementById("day");
+            const selectedMonth = parseInt(monthSelect.value);
+                
+            // Clear existing day options
+            daySelect.innerHTML = '<option value="">Select Day</option>';
+    
+            if (selectedMonth) {
+                let daysInMonth;
+    
+                // Determine the number of days in the selected month
+                if (selectedMonth === 2) { // February
+                    const year = new Date().getFullYear(); // Use the current year or another method to get the year
+                    daysInMonth = (year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0)) ? 29 : 28;
+                } else if ([4, 6, 9, 11].includes(selectedMonth)) { // April, June, September, November
+                    daysInMonth = 30;
+                } else {
+                    daysInMonth = 31;
+                }
+    
+                // Populate the day dropdown with the appropriate number of days
+                for (let day = 1; day <= daysInMonth; day++) {
+                    daySelect.innerHTML += `<option value="${day}">${day}</option>`;
+                }
+            }
+        }
+
+        document.getElementById("back").onclick = function() {
+            window.location.href = "log.html";
+        };
+
+        document.getElementById("next").onclick = function() {
+            event.preventDefault();
+            const monthSelect = document.getElementById("month");
+            const daySelect = document.getElementById("day");
+            const yearSelect = document.getElementById("year");
+
+            if (!monthSelect.value || !daySelect.value || !yearSelect.value) {
+                // Show SweetAlert if any of the fields are not selected
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Missing Information',
+                    text: 'Please select your month, day, and year.',
+                    confirmButtonText: 'OK'
+                });
+            } else {
+                // Redirect to the next page if all fields are selected
+                window.location.href = "log3.html";
+            }
+        };
+    </script>
+
+</body>
+</html>

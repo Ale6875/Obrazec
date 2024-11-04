@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create an Account | Sony Entertainment Network</title>
+    <link rel="shortcut icon" href="/slike/sonyfav.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="s4.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <div id="logo">
+                <img src="slike/sony_logo.png" alt="Sony" id="sony">
+            </div>
+
+            <button id="exit_btn">
+                <img src="slike/x.png" alt="Exit" id="exit">
+            </button>
+        </div>
+
+        <div id="naslov">
+            <h3>Residential Address</h3>
+        </div>
+
+        <div id="prog">
+            <img src="slike/progress_on.png" alt="" class="dot">
+            <img src="slike/progress_on.png" alt="" class="dot">
+            <img src="slike/progress_on.png" alt="" class="dot">
+            <img src="slike/progress_selected.png" alt="" class="dot">
+            <img src="slike/progress_off.png" alt="" class="dot">
+            <img src="slike/progress_off.png" alt="" class="dot">
+        </div>
+
+        <div id="big">
+            <div id="se">
+                Select your current country or region of residence.
+            </div>
+
+            <div id="city">
+                City <br>
+                <input type="text" class="te">
+            </div>
+
+            <div id="sop">
+                State or Province <br>
+                <input type="text" class="te">
+            </div>
+
+            <div id="postcode">
+                Postcode <br>
+                <input type="number" class="te">
+            </div>
+
+            <div id="bn">
+                <button id="back">Back</button>
+                <button id="next">Next</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        document.getElementById("back").onclick = function() {
+            window.location.href = "log3.html";
+        };
+
+        document.getElementById("next").onclick = function() {
+            // Get all input fields
+            const inputs = document.querySelectorAll('.te');
+            let allFilled = true;
+
+            // Check if any input field is empty
+            inputs.forEach(input => {
+                if (input.value.trim() === '') {
+                    allFilled = false;
+                }
+            });
+
+            if (!allFilled) {
+                // Show SweetAlert if any field is empty
+                Swal.fire({
+                    title: 'Error!',
+                    text: 'Please fill in all fields and make sure they are correct.',
+                    icon: 'error',
+                    confirmButtonText: 'Okay'
+                });
+            } else {
+                // Redirect to the next page if all fields are filled
+                window.location.href = "log5.html";
+            }
+        };
+    </script>
+
+</body>
+</html>

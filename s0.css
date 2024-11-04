@@ -1,0 +1,54 @@
+#he1 {
+    height: 198px;
+    background-color: white;
+}
+
+#naslov{
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#pfp{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#prof{
+    height: 100px;
+}
+
+#but{
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#create{
+    width: 315px;
+    height: 35px;
+    border: none;
+    color: white;
+    background-color: #3E66D5;
+}
+
+#create:hover{
+    cursor: pointer;
+}
+
+#tek{
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#he3{
+    height: 226px;
+}

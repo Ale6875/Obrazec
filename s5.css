@@ -1,0 +1,126 @@
+#naslov{
+    height: 60px;
+    background-color: #F0F0F0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#prog{
+    height: 40px;
+    background-color: #F0F0F0;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    margin: 0 0;
+    margin-bottom: 20px;
+}
+
+.dot{
+    height: 16px;
+    width: 16px;
+}
+
+#big{
+    margin-right: 40px;
+    margin-left: 40px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#enter{
+    margin-bottom: 10px;
+}
+
+#this{
+    margin-bottom: 32px;
+}
+
+#oid{
+    margin-bottom: 10px;
+}
+
+.te{
+    width: 410px;
+    height: 26px;
+}
+
+#af{
+    height: 107px;
+    margin-bottom: 20px;
+}
+
+#few{
+    height: 30px;
+}
+
+#nam{
+    height: 72px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.ran{
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+#nam .ran:nth-child(4),
+#nam .ran:nth-child(5) {
+    flex: 1 1 45%;
+}
+
+#name{
+    margin-bottom: 22px;
+}
+
+.te{
+    width: 410px;
+    height: 26px;
+}
+
+#bn{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 58px;
+    padding: 0 20px;
+}
+
+#back{
+    height: 40px;
+    width: 78px;
+    background-color: white;
+    border: 1px solid #c8c8c8;
+}
+
+#back:hover{
+    cursor: pointer;
+}
+
+#next{
+    height: 40px;
+    width: 78px;
+    background-color: #3e66d5;
+    border: none;
+    color: white;
+}
+
+#next:hover{
+    cursor: pointer;
+}
+
+#fe{
+    margin-bottom: 4px;
+}
+
+#se{
+    margin-bottom: 11px;
+}

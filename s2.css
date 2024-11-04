@@ -1,0 +1,102 @@
+#naslov{
+    height: 60px;
+    background-color: #F0F0F0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#prog{
+    height: 40px;
+    background-color: #F0F0F0;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    margin: 0 0;
+    margin-bottom: 20px;
+}
+
+.dot{
+    height: 16px;
+    width: 16px;
+}
+
+#big{
+    margin-right: 40px;
+    margin-left: 40px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#desc{
+    height: 70px;
+    margin-bottom: 20px;
+}
+
+#dmy{
+    margin-bottom: 20px;
+}
+
+#day{
+    width: 127px;
+    height: 36px;
+    background-color: white;
+    border: 1px solid #c1c1c1;
+}
+
+#month{
+    width: 143px;
+    height: 36px;
+    background-color: white;
+    border: 1px solid #c1c1c1;
+}
+
+#year{
+    width: 120px;
+    height: 36px;
+    background-color: white;
+    border: 1px solid #c1c1c1;
+}
+
+#about{
+    margin-top: 20px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+#info{
+    height: 54px;
+    margin-top: 6px;
+    margin-bottom: 210px;
+}
+
+#bn{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 72px;
+    padding: 0 20px;
+}
+
+#back{
+    height: 40px;
+    width: 78px;
+    background-color: white;
+    border: 1px solid #c8c8c8;
+}
+
+#back:hover{
+    cursor: pointer;
+}
+
+#next{
+    height: 40px;
+    width: 78px;
+    background-color: #3e66d5;
+    border: none;
+    color: white;
+}
+
+#next:hover{
+    cursor: pointer;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create an Account | Sony Entertainment Network</title>
+    <link rel="shortcut icon" href="/slike/sonyfav.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="s6.css">
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <div id="logo">
+                <img src="slike/sony_logo.png" alt="Sony" id="sony">
+            </div>
+
+            <button id="exit_btn">
+                <img src="slike/x.png" alt="Exit" id="exit">
+            </button>
+        </div>
+
+        <div id="naslov">
+            <h3>Create an Account</h3>
+        </div>
+
+        <div id="prog">
+            <img src="slike/progress_on.png" alt="" class="dot">
+            <img src="slike/progress_on.png" alt="" class="dot">
+            <img src="slike/progress_on.png" alt="" class="dot">
+            <img src="slike/progress_on.png" alt="" class="dot">
+            <img src="slike/progress_on.png" alt="" class="dot">
+            <img src="slike/progress_selected.png" alt="" class="dot">
+        </div>
+
+        <div id="big">
+            <div id="select">
+                Select how you'd like to receive information about new products, special offers and other promotions about PlayStation and Sony from Sony Interactive Entertainment.
+            </div>
+
+            <div id="rve">
+                <input type="checkbox" name="reviem" id="reviem">
+                <label for="reviem">Recieve via Email</label>
+            </div>
+
+            <div id="rvnoc">
+                <input type="checkbox" name="revinoonco" id="revinoonco">
+                <label for="revinoonco">Recieve via Notification on Console</label>
+            </div>
+
+            <div id="by">
+                By selecting [I Agree], you're confirming that you've understood and accepted the terms of service and the user agreement, and that the information you've provided is accurate.
+            </div>
+
+            <div id="dul">
+                <ul>
+                    <li>Terms of Service and User Agreement</li>
+                    <li>Privacy Policy</li>
+                    <li>Community Code of Conduct</li>
+                    <li>Software Usage Terms</li>
+                </ul>
+            </div>
+
+            <div id="bn">
+                <button id="back">Back</button>
+                <button id="next">Next</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        document.getElementById("back").onclick = function() {
+            window.location.href = "log5.html";
+        };
+    </script>
+
+    <script>
+        document.getElementById("next").onclick = function() {
+            window.location.href = "";
+        };
+    </script>
+
+</body>
+</html>

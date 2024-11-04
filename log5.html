@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create an Account | Sony Entertainment Network</title>
+    <link rel="shortcut icon" href="/slike/sonyfav.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="s5.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <div id="logo">
+                <img src="slike/sony_logo.png" alt="Sony" id="sony">
+            </div>
+
+            <button id="exit_btn">
+                <img src="slike/x.png" alt="Exit" id="exit">
+            </button>
+        </div>
+
+        <div id="naslov">
+            <h3>Profile</h3>
+        </div>
+
+        <div id="prog">
+            <img src="slike/progress_on.png" alt="" class="dot">
+            <img src="slike/progress_on.png" alt="" class="dot">
+            <img src="slike/progress_on.png" alt="" class="dot">
+            <img src="slike/progress_on.png" alt="" class="dot">
+            <img src="slike/progress_selected.png" alt="" class="dot">
+            <img src="slike/progress_off.png" alt="" class="dot">
+        </div>
+
+        <div id="big">
+            <div id="enter">
+                Enter your online ID and your name. Other players can see your online ID in online features such as games, chats and friend searches. It's recommended that you don't include your real name or personal information.
+            </div>
+
+            <div id="this">
+                This name will be used in emails that will be sent from PlayStation. Other players won't be able to see it.
+            </div>
+
+            <div id="oid">
+                Online ID <br>
+                <input type="text" class="te">
+            </div> <br>
+
+            <div id="af">
+                <div id="few">
+                    A few suggestions: <a href="">Refresh</a>
+                </div>
+                
+                <div id="nam">
+                    <div class="ran"></div>
+                    <div class="ran"></div>
+                    <div class="ran"></div>
+                </div>
+            </div> <br>
+
+            <div id="name">
+                Name <br>
+                <input type="text" id="fe" class="te" placeholder="First Name">
+                <input type="text" id="se" class="te" placeholder="Last Name">
+            </div>
+
+            <div id="bn">
+                <button id="back">Back</button>
+                <button id="next">Next</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        function generateRandomID() {
+            const adjectives = ["Cool", "Fast", "Silent", "Brave", "Mighty"];
+            const nouns = ["Warrior", "Gamer", "Hunter", "Wizard", "Ninja"];
+            const numbers = Math.floor(Math.random() * 9999) + 1;
+            const randomAdjective = adjectives[Math.floor(Math.random() * adjectives.length)];
+            const randomNoun = nouns[Math.floor(Math.random() * nouns.length)];
+            return `${randomAdjective}${randomNoun}${numbers}`;
+        }
+
+        function displayRandomIDs() {
+            const namDivs = document.querySelectorAll("#nam div");
+            namDivs.forEach(div => {
+                div.textContent = generateRandomID();
+                
+                div.onclick = function() {
+                    document.querySelector('.te').value = div.textContent; // Set to the first input as an example
+                };
+            });
+        }
+
+        displayRandomIDs();
+
+        document.getElementById("back").onclick = function() {
+            window.location.href = "log4.html";
+        };
+
+        document.getElementById("next").onclick = function() {
+            const inputs = document.querySelectorAll('.te');
+            let allFilled = true;
+
+            inputs.forEach(input => {
+                if (input.value.trim() === '') {
+                    allFilled = false;
+                }
+            });
+
+            if (!allFilled) {
+                Swal.fire({
+                    title: 'Error!',
+                    text: 'Please fill in all fields.',
+                    icon: 'error',
+                    confirmButtonText: 'Okay'
+                });
+            } else {
+                window.location.href = "log6.html";
+            }
+        };
+    </script>
+
+</body>
+</html>

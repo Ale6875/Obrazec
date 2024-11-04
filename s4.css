@@ -1,0 +1,91 @@
+#naslov{
+    height: 60px;
+    background-color: #F0F0F0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#prog{
+    height: 40px;
+    background-color: #F0F0F0;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    margin: 0 0;
+    margin-bottom: 20px;
+}
+
+.dot{
+    height: 16px;
+    width: 16px;
+}
+
+#big{
+    margin-right: 40px;
+    margin-left: 40px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#se{
+    margin-bottom: 25px;
+}
+
+.te{
+    width: 410px;
+    height: 26px;
+}
+
+#city{
+    margin-bottom: 17px;
+}
+
+#sop{
+    margin-bottom: 17px;
+}
+
+#postcode{
+    margin-bottom: 240px;
+}
+
+#bn{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 83px;
+    padding: 0 20px;
+}
+
+#back{
+    height: 40px;
+    width: 78px;
+    background-color: white;
+    border: 1px solid #c8c8c8;
+}
+
+#back:hover{
+    cursor: pointer;
+}
+
+#next{
+    height: 40px;
+    width: 78px;
+    background-color: #3e66d5;
+    border: none;
+    color: white;
+}
+
+#next:hover{
+    cursor: pointer;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
