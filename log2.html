@@ -94,23 +94,20 @@
             const daySelect = document.getElementById("day");
             const selectedMonth = parseInt(monthSelect.value);
                 
-            // Clear existing day options
             daySelect.innerHTML = '<option value="">Select Day</option>';
     
             if (selectedMonth) {
                 let daysInMonth;
     
-                // Determine the number of days in the selected month
-                if (selectedMonth === 2) { // February
-                    const year = new Date().getFullYear(); // Use the current year or another method to get the year
+                if (selectedMonth === 2) {
+                    const year = new Date().getFullYear();
                     daysInMonth = (year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0)) ? 29 : 28;
-                } else if ([4, 6, 9, 11].includes(selectedMonth)) { // April, June, September, November
+                } else if ([4, 6, 9, 11].includes(selectedMonth)) {
                     daysInMonth = 30;
                 } else {
                     daysInMonth = 31;
                 }
     
-                // Populate the day dropdown with the appropriate number of days
                 for (let day = 1; day <= daysInMonth; day++) {
                     daySelect.innerHTML += `<option value="${day}">${day}</option>`;
                 }
@@ -128,7 +125,6 @@
             const yearSelect = document.getElementById("year");
 
             if (!monthSelect.value || !daySelect.value || !yearSelect.value) {
-                // Show SweetAlert if any of the fields are not selected
                 Swal.fire({
                     icon: 'error',
                     title: 'Missing Information',
@@ -136,7 +132,6 @@
                     confirmButtonText: 'OK'
                 });
             } else {
-                // Redirect to the next page if all fields are selected
                 window.location.href = "log3.html";
             }
         };
