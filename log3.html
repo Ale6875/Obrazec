@@ -62,15 +62,12 @@
 
     <script>
         document.getElementById('next').addEventListener('click', function() {
-            // Get the values from the input fields
             const email = document.getElementById('email').value;
             const password = document.getElementById('se').value;
             const confirmPassword = document.getElementById('re').value;
 
-            // Validate email
             const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailPattern.test(email) || password.trim() === "" || confirmPassword.trim() === "") {
-                // Show SweetAlert if email is invalid or passwords are empty
                 Swal.fire({
                     icon: 'error',
                     title: 'Oops...',
@@ -90,12 +87,10 @@
                 return;
             }
 
-            // Navigate to log4.html if validation is successful
             window.location.href = 'log4.html';
         });
 
         document.getElementById('back').addEventListener('click', function() {
-            // Navigate to log2.html
             window.location.href = 'log2.html';
         });
     </script>
