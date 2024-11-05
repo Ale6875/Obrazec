@@ -70,11 +70,9 @@
         };
 
         document.getElementById("next").onclick = function() {
-            // Get all input fields
             const inputs = document.querySelectorAll('.te');
             let allFilled = true;
 
-            // Check if any input field is empty
             inputs.forEach(input => {
                 if (input.value.trim() === '') {
                     allFilled = false;
@@ -82,7 +80,6 @@
             });
 
             if (!allFilled) {
-                // Show SweetAlert if any field is empty
                 Swal.fire({
                     title: 'Error!',
                     text: 'Please fill in all fields and make sure they are correct.',
@@ -90,7 +87,6 @@
                     confirmButtonText: 'Okay'
                 });
             } else {
-                // Redirect to the next page if all fields are filled
                 window.location.href = "log5.html";
             }
         };
