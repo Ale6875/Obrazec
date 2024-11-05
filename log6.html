@@ -7,6 +7,8 @@
     <link rel="shortcut icon" href="/slike/sonyfav.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="s6.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <div id="main">
@@ -74,11 +76,18 @@
         document.getElementById("back").onclick = function() {
             window.location.href = "log5.html";
         };
-    </script>
 
-    <script>
         document.getElementById("next").onclick = function() {
-            window.location.href = "";
+            Swal.fire({
+                title: 'Account Creation Successful!',
+                text: 'Your account has been created successfully.',
+                icon: 'success',
+                confirmButtonText: 'OK'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = "index.html";
+                }
+            });
         };
     </script>
 
