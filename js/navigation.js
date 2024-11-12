@@ -1,3 +1,78 @@
+document.getElementById("signInLink").onclick = function() {
+    document.getElementById("page0").style.display = "none";
+    document.getElementById("page").style.display = "block";
+};
+
+document.getElementById("log").onclick = function() {
+    const emailAddress = document.getElementById("emaill");
+    const passwordd = document.getElementById("see");
+
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+    if (emailAddress.value === "" || passwordd.value === "") {
+        Swal.fire({
+            icon: 'error',
+            title: 'Error...',
+            text: 'Please fill in all fields: Email and Password!',
+            customClass: {
+                confirmButton: 'custom-confirm-button'
+            }
+        });
+    } else if (!emailPattern.test(emailAddress.value)) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Invalid Email',
+            text: 'Please enter a valid email address!',
+            customClass: {
+                confirmButton: 'custom-confirm-button'
+            }
+        });
+    } else {
+        Swal.fire({
+            icon: 'success',
+            title: 'Log in succesfull!',
+            text: 'You have successfully logged in!',
+            customClass: {
+                confirmButton: 'custom-confirm-button'
+            }
+        }).then((result) => {
+            if (result.isConfirmed) {
+                document.getElementById("page6").style.display = "none";
+                document.getElementById("page0").style.display = "block";
+                
+                document.getElementById('country').selectedIndex = 0;
+                document.getElementById('month').selectedIndex = 0;
+                document.getElementById('day').selectedIndex = 0;
+                document.getElementById('year').selectedIndex = 0;
+                document.getElementById('email').value = "";
+                document.getElementById('se').value = "";
+                document.getElementById('re').value = "";
+                document.getElementById('ci').value = "";
+                document.getElementById('storpr').value = "";
+                document.getElementById('po').value = "";
+                document.getElementById('onlineid').value = "";
+                document.getElementById('fe').value = "";
+                document.getElementById('sse').value = "";
+                document.getElementById('emaill').value = "";
+                document.getElementById('see').value = "";
+            }
+        });
+        document.getElementById("page").style.display = "none";
+        document.getElementById("page0").style.display = "block";
+    }
+};
+
+document.getElementById("exit_btn").addEventListener("click", function(event) {
+    document.getElementById("page").style.display = "none";
+    document.getElementById("page1").style.display = "none";
+    document.getElementById("page2").style.display = "none";
+    document.getElementById("page3").style.display = "none";
+    document.getElementById("page4").style.display = "none";
+    document.getElementById("page5").style.display = "none";
+    document.getElementById("page6").style.display = "none";
+    document.getElementById("page0").style.display = "block";
+});
+
 document.getElementById("create").onclick = function() {
     document.getElementById("page0").style.display = "none";
     document.getElementById("page1").style.display = "block";
@@ -124,4 +199,29 @@ document.getElementById("next4").onclick = function() {
 document.getElementById("back4").onclick = function() {
     document.getElementById("page5").style.display = "none";
     document.getElementById("page4").style.display = "block";
+};
+
+document.getElementById("next5").onclick = function() {
+    const onlineIdInput = document.getElementById("onlineid");
+    const firstNameInput = document.getElementById("fe");
+    const lastNameInput = document.getElementById("sse");
+
+    if (onlineIdInput.value === "" || firstNameInput.value === "" || lastNameInput.value === "") {
+        Swal.fire({
+            icon: 'error',
+            title: 'Error...',
+            text: 'Please fill in all fields: Online ID, First Name, Last Name!',
+            customClass: {
+                confirmButton: 'custom-confirm-button'
+            }
+        });
+    } else {
+        document.getElementById("page5").style.display = "none";
+        document.getElementById("page6").style.display = "block";
+    }
+};
+
+document.getElementById("back5").onclick = function() {
+    document.getElementById("page6").style.display = "none";
+    document.getElementById("page5").style.display = "block";
 };
