@@ -9,7 +9,7 @@ html, body {
 
 body {
     font-family: 'Helvetica Neue','Noto Sans CJK JP',sans-serif;
-    background-image: url("./slike/wallpaper.png");
+    background-image: url("../slike/wallpaper.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
