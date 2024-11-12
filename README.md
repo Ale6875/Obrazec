@@ -1,2 +1,2 @@
 # Obrazec
-#### Moj spletni obrazec, ki ima temo prijave in kreiranja sony računa (playstation)
+#### Moj spletni obrazec, ki vsebuje temo prijave in kreiranja sony računa (playstation)
