@@ -126,6 +126,41 @@ body {
     height: 226px;
 }
 
+#si1{
+    height: 145px;
+}
+
+#pNaslov{
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#loginput{
+    margin-bottom: 35px;
+}
+
+#log{
+    width: 315px;
+    height: 35px;
+    border: none;
+    color: white;
+    background-color: #3E66D5;
+}
+
+#log:hover{
+    cursor: pointer;
+}
+
+#smt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 61px;
+}
+
 #naslov{
     height: 60px;
     background-color: #F0F0F0;
@@ -356,4 +391,26 @@ body {
 
 #name{
     margin-bottom: 7px;
+}
+
+#select{
+    margin-bottom: 17px;
+}
+
+#rve{
+    height: 40px;
+}
+
+#rvnoc{
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+#by{
+    margin-bottom: 5px;
+}
+
+#dul{
+    margin-bottom: 84px;
+    margin-left: 15px;
 }
