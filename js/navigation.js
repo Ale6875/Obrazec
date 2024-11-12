@@ -120,9 +120,40 @@ document.getElementById("next2").onclick = function() {
                 confirmButton: 'custom-confirm-button'
             }
         });
+    } if (monthSelect.value === "" || daySelect.value === "" || yearSelect.value === "") {
+        Swal.fire({
+            icon: 'error',
+            title: 'Error...',
+            text: 'Please select your date of birth!',
+            customClass: {
+                confirmButton: 'custom-confirm-button'
+            }
+        });
     } else {
-        document.getElementById("page2").style.display = "none";
-        document.getElementById("page3").style.display = "block";
+        const selectedDate = new Date(yearSelect.value, monthSelect.value - 1, daySelect.value);
+        const today = new Date();
+    
+        let age = today.getFullYear() - selectedDate.getFullYear();
+        const monthDiff = today.getMonth() - selectedDate.getMonth();
+        const dayDiff = today.getDate() - selectedDate.getDate();
+    
+        if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+            age--;
+        }
+    
+        if (age < 18) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error...',
+                text: 'You must be at least 18 years old!',
+                customClass: {
+                    confirmButton: 'custom-confirm-button'
+                }
+            });
+        } else {
+            document.getElementById("page2").style.display = "none";
+            document.getElementById("page3").style.display = "block";
+        }
     }
 };
 
