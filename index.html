@@ -36,8 +36,33 @@
                 </div>
         
                 <div id="tek">
-                    <h5>Already have an account?   <a href="">Sign in</a></h5>
+                    <h5>Already have an account?   <a href="#" id="signInLink" onclick="return false;">Sign in</a></h5>
                 </div>
+    
+            </div>
+            <div id="he3"></div>
+        </div>
+
+        <!--Stran-->
+        <div id="page" style="display: none;">
+            <div id="big">
+                <div id="si1"></div>
+                <div id="he2">
+                    <div id="pNaslov">
+                        <h3>Sign in:</h3>
+                    </div>
+    
+                    <div id="loginput">
+                        <label for="emaill">E-Mail:</label>
+                        <input type="email" class="te" id="emaill" name="emaill" placeholder="Email Address"> <br> <br>
+                        <label for="see">Password:</label>
+                        <input type="password" class="te" id="see" name="see" placeholder="Password">
+                    </div>
+            
+                    <div id="smt">
+                        <button id="log">Log in</button>
+                    </div>
+            </div>
     
             </div>
             <div id="he3"></div>
@@ -61,7 +86,7 @@
                     Your home location is used to verify your identity when you contact us. Other players won't be able to see it.
                 </div>
                 <div id="countrydiv">
-                    Country/Region<br><br>
+                    <label for="country">Country/Region</label><br><br>
                     <select id="country" name="country">
                         <option value="" selected disabled>Select a country</option>
                         <option value="Argentina">Argentina</option>
@@ -230,15 +255,15 @@
                 </div>
     
                 <div id="sign">
-                    Sign-In ID <br>
-                    <input type="email" class="te" id="email" placeholder="Email Address">
+                    <label for="email">E-mail</label> <br>
+                    <input type="email" class="te" id="email" name="email" placeholder="Email Address">
                 </div>
     
                 <div id="pass">
-                    Password <br>
-                    <input type="password" class="te" id="se" placeholder="Password"> <br>
-                    Re-enter Password
-                    <input type="password" class="te" id="re" placeholder="Re-enter Password">
+                    <label for="se">Password</label> <br>
+                    <input type="password" class="te" id="se" name="se" placeholder="Password"> <br>
+                    <label for="re">Re-enter Password</label>
+                    <input type="password" class="te" id="re" name="re" placeholder="Re-enter Password">
                 </div>
     
                 <div id="bn">
@@ -269,18 +294,18 @@
                 </div>
     
                 <div id="city">
-                    City <br>
-                    <input type="text" class="te" id="ci">
+                    <label for="ci">City</label> <br>
+                    <input type="text" class="te" id="ci" name="ci">
                 </div>
     
                 <div id="sop">
-                    State or Province <br>
-                    <input type="text" class="te" id="storpr">
+                    <label for="storpr">State or Province</label> <br>
+                    <input type="text" class="te" id="storpr" name="storpr">
                 </div>
     
                 <div id="postcode">
-                    Postcode <br>
-                    <input type="text" class="te" id="po" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                    <label for="po">Postcode</label> <br>
+                    <input type="text" class="te" id="po" name="po" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
                 </div>
     
                 <div id="bn">
@@ -315,13 +340,13 @@
                 </div>
     
                 <div id="oid">
-                    Online ID <br>
-                    <input type="text" class="te" id="onlineid">
+                    <label for="onlineid">Online ID</label> <br>
+                    <input type="text" class="te" id="onlineid" name="onlineid">
                 </div> <br>
     
                 <div id="af">
                     <div id="few">
-                        A few suggestions: <a href="">Refresh</a>
+                        <a href="#" onclick="refreshNames(); return false;">Refresh Names</a>
                     </div>
                     
                     <div id="nam">
@@ -332,15 +357,65 @@
                 </div> <br>
     
                 <div id="name">
-                    First Name <br>
-                    <input type="text" id="fe" class="te" placeholder="First Name"> <br> <br>
-                    Last Name <br>
-                    <input type="text" id="sse" class="te" placeholder="Last Name">
+                    <label for="fe">First Name</label> <br>
+                    <input type="text" id="fe" class="te" name="fe" placeholder="First Name"> <br> <br>
+                    <label for="sse">Last Name</label> <br>
+                    <input type="text" id="sse" class="te" name="sse" placeholder="Last Name">
                 </div>
     
                 <div id="bn">
                     <button class="back" id="back4">Back</button>
                     <button class="next" id="next5">Next</button>
+                </div>
+            </div>
+        </div>
+
+        <!--Stran 6-->
+        <div id="page6" style="display: none;">
+            <div id="naslov">
+                <h3>Create an Account</h3>
+            </div>
+    
+            <div id="prog">
+                <img src="slike/progress_on.png" alt="" class="dot">
+                <img src="slike/progress_on.png" alt="" class="dot">
+                <img src="slike/progress_on.png" alt="" class="dot">
+                <img src="slike/progress_on.png" alt="" class="dot">
+                <img src="slike/progress_on.png" alt="" class="dot">
+                <img src="slike/progress_selected.png" alt="" class="dot">
+            </div>
+    
+            <div id="big">
+                <div id="select">
+                    Select how you'd like to receive information about new products, special offers and other promotions about PlayStation and Sony from Sony Interactive Entertainment.
+                </div>
+    
+                <div id="rve">
+                    <label for="reviem">Recieve via Email</label>
+                    <input type="checkbox" name="reviem" id="reviem">
+                </div>
+    
+                <div id="rvnoc">
+                    <label for="revinoonco">Recieve via Notification on Console</label>
+                    <input type="checkbox" name="revinoonco" id="revinoonco">
+                </div>
+    
+                <div id="by">
+                    By selecting [I Agree], you're confirming that you've understood and accepted the terms of service and the user agreement, and that the information you've provided is accurate.
+                </div>
+    
+                <div id="dul">
+                    <ul>
+                        <li>Terms of Service and User Agreement</li>
+                        <li>Privacy Policy</li>
+                        <li>Community Code of Conduct</li>
+                        <li>Software Usage Terms</li>
+                    </ul>
+                </div>
+    
+                <div id="bn">
+                    <button class="back" id="back5">Back</button>
+                    <button class="next" id="next6">Next</button>
                 </div>
             </div>
         </div>
