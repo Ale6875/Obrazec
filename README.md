@@ -1,2 +1,2 @@
 # Web Form
-My online form, which contains a log in function and a creation of a sony account (playstation)
+My online form, which contains a login function and the creation of a Sony account (PlayStation)
