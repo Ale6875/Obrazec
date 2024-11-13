@@ -1,2 +1,2 @@
-# Obrazec
-#### Moj spletni obrazec, ki vsebuje temo prijave in kreiranja sony računa (playstation)
+# Web Form
+My online form, which contains a log in function and a creation of a sony account (playstation)
