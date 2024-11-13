@@ -257,7 +257,7 @@ document.getElementById("next4").onclick = function() {
                 confirmButton: 'custom-confirm-button'
             }
         });
-    } if (cityInput.value === "") {
+    } else if (cityInput.value === "") {
         cityInput.style.border='none';
         cityInput.style.border='1px solid #FF6961';
         stateOrProvinceInput.style.border='none';
@@ -272,7 +272,7 @@ document.getElementById("next4").onclick = function() {
                 confirmButton: 'custom-confirm-button'
             }
         });
-    } if (stateOrProvinceInput.value === "") {
+    } else if (stateOrProvinceInput.value === "") {
         cityInput.style.border='none';
         cityInput.style.border='1px solid #c1c1c1';
         stateOrProvinceInput.style.border='none';
@@ -287,7 +287,7 @@ document.getElementById("next4").onclick = function() {
                 confirmButton: 'custom-confirm-button'
             }
         });
-    } if (postCodeInput.value === "") {
+    } else if (postCodeInput.value === "") {
         cityInput.style.border='none';
         cityInput.style.border='1px solid #c1c1c1';
         stateOrProvinceInput.style.border='none';
@@ -302,7 +302,7 @@ document.getElementById("next4").onclick = function() {
                 confirmButton: 'custom-confirm-button'
             }
         });
-    } if (cityInput.value === "" && stateOrProvinceInput.value === "") {
+    } else if (cityInput.value === "" && stateOrProvinceInput.value === "") {
         cityInput.style.border='none';
         cityInput.style.border='1px solid #FF6961';
         stateOrProvinceInput.style.border='none';
@@ -317,7 +317,7 @@ document.getElementById("next4").onclick = function() {
                 confirmButton: 'custom-confirm-button'
             }
         });
-    } if (cityInput.value === "" && postCodeInput.value === "") {
+    } else if (cityInput.value === "" && postCodeInput.value === "") {
         cityInput.style.border='none';
         cityInput.style.border='1px solid #FF6961';
         stateOrProvinceInput.style.border='none';
@@ -332,7 +332,7 @@ document.getElementById("next4").onclick = function() {
                 confirmButton: 'custom-confirm-button'
             }
         });
-    } if (stateOrProvinceInput.value === "" && postCodeInput.value === "") {
+    } else if (stateOrProvinceInput.value === "" && postCodeInput.value === "") {
         cityInput.style.border='none';
         cityInput.style.border='1px solid #c1c1c1';
         stateOrProvinceInput.style.border='none';
@@ -347,7 +347,7 @@ document.getElementById("next4").onclick = function() {
                 confirmButton: 'custom-confirm-button'
             }
         });
-    } if (cityInput.value === "" && postCodeInput.value === "") {
+    } else if (cityInput.value === "" && postCodeInput.value === "") {
         cityInput.style.border='none';
         cityInput.style.border='1px solid #FF6961';
         stateOrProvinceInput.style.border='none';
