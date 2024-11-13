@@ -10,10 +10,6 @@ document.getElementById("log").onclick = function() {
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 
     if (emailAddress.value === "" || passwordd.value === "") {
-        emailAddress.style.border='none';
-        emailAddress.style.border='1px solid #FF6961';
-        passwordd.style.border='none';
-        passwordd.style.border='1px solid #FF6961';
         Swal.fire({
             icon: 'error',
             title: 'Error...',
@@ -23,8 +19,6 @@ document.getElementById("log").onclick = function() {
             }
         });
     } else if (!emailPattern.test(emailAddress.value)) {
-        emailAddress.style.border='none';
-        emailAddress.style.border='1px solid #FF6961';
         Swal.fire({
             icon: 'error',
             title: 'Invalid Email',
@@ -93,8 +87,6 @@ document.getElementById("next1").onclick = function() {
     const countrySelect = document.getElementById("country");
 
     if (countrySelect.value === "") {
-        countrySelect.style.border='none';
-        countrySelect.style.border='1px solid #FF6961';
         Swal.fire({
             icon: 'error',
             title: 'Error...',
@@ -120,12 +112,15 @@ document.getElementById("next2").onclick = function() {
     const yearSelect = document.getElementById("year");
 
     if (monthSelect.value === "" || daySelect.value === "" || yearSelect.value === "") {
-        monthSelect.style.border='none';
-        monthSelect.style.border='1px solid #FF6961';
-        daySelect.style.border='none';
-        daySelect.style.border='1px solid #FF6961';
-        yearSelect.style.border='none';
-        yearSelect.style.border='1px solid #FF6961';
+        Swal.fire({
+            icon: 'error',
+            title: 'Error...',
+            text: 'Please select your date of birth!',
+            customClass: {
+                confirmButton: 'custom-confirm-button'
+            }
+        });
+    } if (monthSelect.value === "" || daySelect.value === "" || yearSelect.value === "") {
         Swal.fire({
             icon: 'error',
             title: 'Error...',
@@ -147,12 +142,6 @@ document.getElementById("next2").onclick = function() {
         }
     
         if (age < 18) {
-            monthSelect.style.border='none';
-            monthSelect.style.border='1px solid #FF6961';
-            daySelect.style.border='none';
-            daySelect.style.border='1px solid #FF6961';
-            yearSelect.style.border='none';
-            yearSelect.style.border='1px solid #FF6961';
             Swal.fire({
                 icon: 'error',
                 title: 'Error...',
