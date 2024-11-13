@@ -25,8 +25,6 @@ document.getElementById("log").onclick = function() {
     } else if (!emailPattern.test(emailAddress.value)) {
         emailAddress.style.border='none';
         emailAddress.style.border='1px solid #FF6961';
-        passwordd.style.border='none';
-        passwordd.style.border='1px solid #c1c1c1';
         Swal.fire({
             icon: 'error',
             title: 'Invalid Email',
@@ -183,12 +181,6 @@ document.getElementById("next3").onclick = function() {
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 
     if (emailInput.value === "" || passwordInput.value === "" || rePasswordInput.value === "") {
-        emailInput.style.border='none';
-        emailInput.style.border='1px solid #FF6961';
-        passwordInput.style.border='none';
-        passwordInput.style.border='1px solid #FF6961';
-        rePasswordInput.style.border='none';
-        rePasswordInput.style.border='1px solid #FF6961';
         Swal.fire({
             icon: 'error',
             title: 'Error...',
@@ -198,12 +190,6 @@ document.getElementById("next3").onclick = function() {
             }
         });
     } else if (passwordInput.value!=rePasswordInput.value) {
-        emailInput.style.border='none';
-        emailInput.style.border='1px solid #c1c1c1';
-        passwordInput.style.border='none';
-        passwordInput.style.border='1px solid #FF6961';
-        rePasswordInput.style.border='none';
-        rePasswordInput.style.border='1px solid #FF6961';
         Swal.fire({
             icon: 'error',
             title: 'Passwords don\'t match',
@@ -213,12 +199,6 @@ document.getElementById("next3").onclick = function() {
             }
         });
     } else if (!emailPattern.test(emailInput.value)) {
-        emailInput.style.border='none';
-        emailInput.style.border='1px solid #FF6961';
-        passwordInput.style.border='none';
-        passwordInput.style.border='1px solid #c1c1c1';
-        rePasswordInput.style.border='none';
-        rePasswordInput.style.border='1px solid #c1c1c1';
         Swal.fire({
             icon: 'error',
             title: 'Invalid Email',
@@ -242,13 +222,8 @@ document.getElementById("next4").onclick = function() {
     const cityInput = document.getElementById("ci");
     const stateOrProvinceInput = document.getElementById("storpr");
     const postCodeInput = document.getElementById("po");
+
     if (cityInput.value === "" || stateOrProvinceInput.value === "" || postCodeInput.value === "") {
-        cityInput.style.border='none';
-        cityInput.style.border='1px solid #FF6961';
-        stateOrProvinceInput.style.border='none';
-        stateOrProvinceInput.style.border='1px solid #c1c1c1';
-        postCodeInput.style.border='none';
-        postCodeInput.style.border='1px solid #c1c1c1';
         Swal.fire({
             icon: 'error',
             title: 'Error...',
@@ -257,112 +232,7 @@ document.getElementById("next4").onclick = function() {
                 confirmButton: 'custom-confirm-button'
             }
         });
-    } else if (cityInput.value === "") {
-        cityInput.style.border='none';
-        cityInput.style.border='1px solid #FF6961';
-        stateOrProvinceInput.style.border='none';
-        stateOrProvinceInput.style.border='1px solid #c1c1c1';
-        postCodeInput.style.border='none';
-        postCodeInput.style.border='1px solid #c1c1c1';
-        Swal.fire({
-            icon: 'error',
-            title: 'Error...',
-            text: 'Please fill in all fields: City, State or Province, Postcode!',
-            customClass: {
-                confirmButton: 'custom-confirm-button'
-            }
-        });
-    } else if (stateOrProvinceInput.value === "") {
-        cityInput.style.border='none';
-        cityInput.style.border='1px solid #c1c1c1';
-        stateOrProvinceInput.style.border='none';
-        stateOrProvinceInput.style.border='1px solid #FF6961';
-        postCodeInput.style.border='none';
-        postCodeInput.style.border='1px solid #c1c1c1';
-        Swal.fire({
-            icon: 'error',
-            title: 'Error...',
-            text: 'Please fill in all fields: City, State or Province, Postcode!',
-            customClass: {
-                confirmButton: 'custom-confirm-button'
-            }
-        });
-    } else if (postCodeInput.value === "") {
-        cityInput.style.border='none';
-        cityInput.style.border='1px solid #c1c1c1';
-        stateOrProvinceInput.style.border='none';
-        stateOrProvinceInput.style.border='1px solid #c1c1c1';
-        postCodeInput.style.border='none';
-        postCodeInput.style.border='1px solid #FF6961';
-        Swal.fire({
-            icon: 'error',
-            title: 'Error...',
-            text: 'Please fill in all fields: City, State or Province, Postcode!',
-            customClass: {
-                confirmButton: 'custom-confirm-button'
-            }
-        });
-    } else if (cityInput.value === "" && stateOrProvinceInput.value === "") {
-        cityInput.style.border='none';
-        cityInput.style.border='1px solid #FF6961';
-        stateOrProvinceInput.style.border='none';
-        stateOrProvinceInput.style.border='1px solid #FF6961';
-        postCodeInput.style.border='none';
-        postCodeInput.style.border='1px solid #c1c1c1';
-        Swal.fire({
-            icon: 'error',
-            title: 'Error...',
-            text: 'Please fill in all fields: City, State or Province, Postcode!',
-            customClass: {
-                confirmButton: 'custom-confirm-button'
-            }
-        });
-    } else if (cityInput.value === "" && postCodeInput.value === "") {
-        cityInput.style.border='none';
-        cityInput.style.border='1px solid #FF6961';
-        stateOrProvinceInput.style.border='none';
-        stateOrProvinceInput.style.border='1px solid #c1c1c1';
-        postCodeInput.style.border='none';
-        postCodeInput.style.border='1px solid #FF6961';
-        Swal.fire({
-            icon: 'error',
-            title: 'Error...',
-            text: 'Please fill in all fields: City, State or Province, Postcode!',
-            customClass: {
-                confirmButton: 'custom-confirm-button'
-            }
-        });
-    } else if (stateOrProvinceInput.value === "" && postCodeInput.value === "") {
-        cityInput.style.border='none';
-        cityInput.style.border='1px solid #c1c1c1';
-        stateOrProvinceInput.style.border='none';
-        stateOrProvinceInput.style.border='1px solid #FF6961';
-        postCodeInput.style.border='none';
-        postCodeInput.style.border='1px solid #FF6961';
-        Swal.fire({
-            icon: 'error',
-            title: 'Error...',
-            text: 'Please fill in all fields: City, State or Province, Postcode!',
-            customClass: {
-                confirmButton: 'custom-confirm-button'
-            }
-        });
-    } else if (cityInput.value === "" && postCodeInput.value === "") {
-        cityInput.style.border='none';
-        cityInput.style.border='1px solid #FF6961';
-        stateOrProvinceInput.style.border='none';
-        stateOrProvinceInput.style.border='1px solid #c1c1c1';
-        postCodeInput.style.border='none';
-        postCodeInput.style.border='1px solid #FF6961';
-        Swal.fire({
-            icon: 'error',
-            title: 'Error...',
-            text: 'Please fill in all fields: City, State or Province, Postcode!',
-            customClass: {
-                confirmButton: 'custom-confirm-button'
-            }
-        });
-    }  else {
+    } else {
         document.getElementById("page4").style.display = "none";
         document.getElementById("page5").style.display = "block";
     }
@@ -379,117 +249,6 @@ document.getElementById("next5").onclick = function() {
     const lastNameInput = document.getElementById("sse");
 
     if (onlineIdInput.value === "" || firstNameInput.value === "" || lastNameInput.value === "") {
-        onlineIdInput.style.border='none';
-        onlineIdInput.style.border='1px solid #FF6961';
-        firstNameInput.style.border='none';
-        firstNameInput.style.border='1px solid #c1c1c1';
-        lastNameInput.style.border='none';
-        lastNameInput.style.border='1px solid #c1c1c1';
-        Swal.fire({
-            icon: 'error',
-            title: 'Error...',
-            text: 'Please fill in all fields: Online ID, First Name, Last Name!',
-            customClass: {
-                confirmButton: 'custom-confirm-button'
-            }
-        });
-    } else if (onlineIdInput.value === "") {
-        onlineIdInput.style.border='none';
-        onlineIdInput.style.border='1px solid #FF6961';
-        firstNameInput.style.border='none';
-        firstNameInput.style.border='1px solid #c1c1c1';
-        lastNameInput.style.border='none';
-        lastNameInput.style.border='1px solid #c1c1c1';
-        Swal.fire({
-            icon: 'error',
-            title: 'Error...',
-            text: 'Please fill in all fields: Online ID, First Name, Last Name!',
-            customClass: {
-                confirmButton: 'custom-confirm-button'
-            }
-        });
-    } else if (firstNameInput.value === "") {
-        onlineIdInput.style.border='none';
-        onlineIdInput.style.border='1px solid #c1c1c1';
-        firstNameInput.style.border='none';
-        firstNameInput.style.border='1px solid #FF6961';
-        lastNameInput.style.border='none';
-        lastNameInput.style.border='1px solid #c1c1c1';
-        Swal.fire({
-            icon: 'error',
-            title: 'Error...',
-            text: 'Please fill in all fields: Online ID, First Name, Last Name!',
-            customClass: {
-                confirmButton: 'custom-confirm-button'
-            }
-        });
-    } else if (lastNameInput.value === "") {
-        onlineIdInput.style.border='none';
-        onlineIdInput.style.border='1px solid #c1c1c1';
-        firstNameInput.style.border='none';
-        firstNameInput.style.border='1px solid #c1c1c1';
-        lastNameInput.style.border='none';
-        lastNameInput.style.border='1px solid #FF6961';
-        Swal.fire({
-            icon: 'error',
-            title: 'Error...',
-            text: 'Please fill in all fields: Online ID, First Name, Last Name!',
-            customClass: {
-                confirmButton: 'custom-confirm-button'
-            }
-        });
-    } else if (onlineIdInput.value === "" && firstNameInput.value === "") {
-        onlineIdInput.style.border='none';
-        onlineIdInput.style.border='1px solid #FF6961';
-        firstNameInput.style.border='none';
-        firstNameInput.style.border='1px solid #FF6961';
-        lastNameInput.style.border='none';
-        lastNameInput.style.border='1px solid #c1c1c1';
-        Swal.fire({
-            icon: 'error',
-            title: 'Error...',
-            text: 'Please fill in all fields: Online ID, First Name, Last Name!',
-            customClass: {
-                confirmButton: 'custom-confirm-button'
-            }
-        });
-    } else if (onlineIdInput.value === "" && lastNameInput.value === "") {
-        onlineIdInput.style.border='none';
-        onlineIdInput.style.border='1px solid #FF6961';
-        firstNameInput.style.border='none';
-        firstNameInput.style.border='1px solid #c1c1c1';
-        lastNameInput.style.border='none';
-        lastNameInput.style.border='1px solid #FF6961';
-        Swal.fire({
-            icon: 'error',
-            title: 'Error...',
-            text: 'Please fill in all fields: Online ID, First Name, Last Name!',
-            customClass: {
-                confirmButton: 'custom-confirm-button'
-            }
-        });
-    } else if (firstNameInput.value === "" && lastNameInput.value === "") {
-        onlineIdInput.style.border='none';
-        onlineIdInput.style.border='1px solid #c1c1c1';
-        firstNameInput.style.border='none';
-        firstNameInput.style.border='1px solid #FF6961';
-        lastNameInput.style.border='none';
-        lastNameInput.style.border='1px solid #FF6961';
-        Swal.fire({
-            icon: 'error',
-            title: 'Error...',
-            text: 'Please fill in all fields: Online ID, First Name, Last Name!',
-            customClass: {
-                confirmButton: 'custom-confirm-button'
-            }
-        });
-    } else if (onlineIdInput.value === "" && lastNameInput.value === "") {
-        onlineIdInput.style.border='none';
-        onlineIdInput.style.border='1px solid #FF6961';
-        firstNameInput.style.border='none';
-        firstNameInput.style.border='1px solid #c1c1c1';
-        lastNameInput.style.border='none';
-        lastNameInput.style.border='1px solid #FF6961';
         Swal.fire({
             icon: 'error',
             title: 'Error...',
