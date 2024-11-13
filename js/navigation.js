@@ -10,6 +10,10 @@ document.getElementById("log").onclick = function() {
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 
     if (emailAddress.value === "" || passwordd.value === "") {
+        emailAddress.style.border='none';
+        emailAddress.style.border='1px solid #FF6961';
+        passwordd.style.border='none';
+        passwordd.style.border='1px solid #FF6961';
         Swal.fire({
             icon: 'error',
             title: 'Error...',
@@ -19,6 +23,8 @@ document.getElementById("log").onclick = function() {
             }
         });
     } else if (!emailPattern.test(emailAddress.value)) {
+        emailAddress.style.border='none';
+        emailAddress.style.border='1px solid #FF6961';
         Swal.fire({
             icon: 'error',
             title: 'Invalid Email',
@@ -87,6 +93,8 @@ document.getElementById("next1").onclick = function() {
     const countrySelect = document.getElementById("country");
 
     if (countrySelect.value === "") {
+        countrySelect.style.border='none';
+        countrySelect.style.border='1px solid #FF6961';
         Swal.fire({
             icon: 'error',
             title: 'Error...',
@@ -112,15 +120,12 @@ document.getElementById("next2").onclick = function() {
     const yearSelect = document.getElementById("year");
 
     if (monthSelect.value === "" || daySelect.value === "" || yearSelect.value === "") {
-        Swal.fire({
-            icon: 'error',
-            title: 'Error...',
-            text: 'Please select your date of birth!',
-            customClass: {
-                confirmButton: 'custom-confirm-button'
-            }
-        });
-    } if (monthSelect.value === "" || daySelect.value === "" || yearSelect.value === "") {
+        monthSelect.style.border='none';
+        monthSelect.style.border='1px solid #FF6961';
+        daySelect.style.border='none';
+        daySelect.style.border='1px solid #FF6961';
+        yearSelect.style.border='none';
+        yearSelect.style.border='1px solid #FF6961';
         Swal.fire({
             icon: 'error',
             title: 'Error...',
@@ -142,6 +147,12 @@ document.getElementById("next2").onclick = function() {
         }
     
         if (age < 18) {
+            monthSelect.style.border='none';
+            monthSelect.style.border='1px solid #FF6961';
+            daySelect.style.border='none';
+            daySelect.style.border='1px solid #FF6961';
+            yearSelect.style.border='none';
+            yearSelect.style.border='1px solid #FF6961';
             Swal.fire({
                 icon: 'error',
                 title: 'Error...',
@@ -170,6 +181,12 @@ document.getElementById("next3").onclick = function() {
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 
     if (emailInput.value === "" || passwordInput.value === "" || rePasswordInput.value === "") {
+        emailInput.style.border='none';
+        emailInput.style.border='1px solid #FF6961';
+        passwordInput.style.border='none';
+        passwordInput.style.border='1px solid #FF6961';
+        rePasswordInput.style.border='none';
+        rePasswordInput.style.border='1px solid #FF6961';
         Swal.fire({
             icon: 'error',
             title: 'Error...',
@@ -179,6 +196,10 @@ document.getElementById("next3").onclick = function() {
             }
         });
     } else if (passwordInput.value!=rePasswordInput.value) {
+        passwordInput.style.border='none';
+        passwordInput.style.border='1px solid #FF6961';
+        rePasswordInput.style.border='none';
+        rePasswordInput.style.border='1px solid #FF6961';
         Swal.fire({
             icon: 'error',
             title: 'Passwords don\'t match',
@@ -188,6 +209,8 @@ document.getElementById("next3").onclick = function() {
             }
         });
     } else if (!emailPattern.test(emailInput.value)) {
+        emailInput.style.border='none';
+        emailInput.style.border='1px solid #FF6961';
         Swal.fire({
             icon: 'error',
             title: 'Invalid Email',
@@ -213,6 +236,12 @@ document.getElementById("next4").onclick = function() {
     const postCodeInput = document.getElementById("po");
 
     if (cityInput.value === "" || stateOrProvinceInput.value === "" || postCodeInput.value === "") {
+        cityInput.style.border='none';
+        cityInput.style.border='1px solid #FF6961';
+        stateOrProvinceInput.style.border='none';
+        stateOrProvinceInput.style.border='1px solid #FF6961';
+        postCodeInput.style.border='none';
+        postCodeInput.style.border='1px solid #FF6961';
         Swal.fire({
             icon: 'error',
             title: 'Error...',
@@ -238,6 +267,12 @@ document.getElementById("next5").onclick = function() {
     const lastNameInput = document.getElementById("sse");
 
     if (onlineIdInput.value === "" || firstNameInput.value === "" || lastNameInput.value === "") {
+        onlineIdInput.style.border='none';
+        onlineIdInput.style.border='1px solid #FF6961';
+        firstNameInput.style.border='none';
+        firstNameInput.style.border='1px solid #FF6961';
+        lastNameInput.style.border='none';
+        lastNameInput.style.border='1px solid #FF6961';
         Swal.fire({
             icon: 'error',
             title: 'Error...',
