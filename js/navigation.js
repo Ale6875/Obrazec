@@ -129,9 +129,9 @@ document.getElementById("next2").onclick = function() {
     const yearSelect = document.getElementById("year");
 
     if (monthSelect.value === "" || daySelect.value === "" || yearSelect.value === "") {
-        monthSelect.style.border = "2px solid #FF6961";
-        daySelect.style.border = "2px solid #FF6961";
-        yearSelect.style.border = "2px solid #FF6961";
+        if (monthSelect.value === "") monthSelect.style.border = "2px solid #FF6961";
+        if (daySelect.value === "") daySelect.style.border = "2px solid #FF6961";
+        if (yearSelect.value === "") yearSelect.style.border = "2px solid #FF6961";
         Swal.fire({
             icon: 'error',
             title: 'Error...',
@@ -192,8 +192,19 @@ document.getElementById("next3").onclick = function() {
                 confirmButton: 'custom-confirm-button'
             }
         });
-    } else if (!emailPattern.test(emailInput.value)) {
-        emailInput.style.border = "2px solid #FF6961";
+        if (!emailPattern.test(emailInput.value)) {
+            emailInput.style.border = "2px solid #FF6961";
+            Swal.fire({
+                icon: 'error',
+                title: 'Invalid Email',
+                text: 'Please enter a valid email address!',
+                customClass: {
+                    confirmButton: 'custom-confirm-button'
+                }
+            });
+    } else if (!emailPattern.test(emailInput.value) || passwordInput.value!=rePasswordInput.value) {
+        if(!emailPattern.test(emailInput.value)){
+            emailInput.style.border = "2px solid #FF6961";
         Swal.fire({
             icon: 'error',
             title: 'Invalid Email',
@@ -202,17 +213,19 @@ document.getElementById("next3").onclick = function() {
                 confirmButton: 'custom-confirm-button'
             }
         });
-    } else if (passwordInput.value!=rePasswordInput.value) {
-        passwordInput.style.border = "2px solid #FF6961";
-        rePasswordInput.style.border = "2px solid #FF6961";
-        Swal.fire({
-            icon: 'error',
-            title: 'Passwords don\'t match',
-            text: 'Please ensure both fields contain the same password!',
-            customClass: {
-                confirmButton: 'custom-confirm-button'
-            }
-        });
+        } else if (passwordInput.value!=rePasswordInput.value) {
+            passwordInput.style.border = "2px solid #FF6961";
+            rePasswordInput.style.border = "2px solid #FF6961";
+            Swal.fire({
+                icon: 'error',
+                title: 'Passwords don\'t match',
+                text: 'Please ensure both fields contain the same password!',
+                customClass: {
+                    confirmButton: 'custom-confirm-button'
+                }
+            });
+        }
+    } 
     } else {
         document.getElementById("page3").style.display = "none";
         document.getElementById("page4").style.display = "block";
