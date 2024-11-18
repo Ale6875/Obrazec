@@ -1,3 +1,14 @@
+document.querySelector('#bom').addEventListener('click',()=>{
+    Swal.fire({
+        icon: 'info',
+        title: 'Vizitka',
+        html: 'Aleksandar Kovačević <br> ERŠ Nova Gorica <br> Razred: 4. Ra',
+        customClass: {
+            confirmButton: 'custom-confirm-button'
+        }
+    });
+});
+
 document.getElementById("signInLink").onclick = function() {
     document.getElementById("page0").style.display = "none";
     document.getElementById("page").style.display = "block";
