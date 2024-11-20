@@ -216,6 +216,7 @@ document.getElementById("next3").onclick = function() {
     } else if (!emailPattern.test(emailInput.value) || passwordInput.value!=rePasswordInput.value) {
         if(!emailPattern.test(emailInput.value)){
             emailInput.style.border = "2px solid #FF6961";
+            emailInput.value="";
         Swal.fire({
             icon: 'error',
             title: 'Invalid Email',
@@ -227,6 +228,8 @@ document.getElementById("next3").onclick = function() {
         } else if (passwordInput.value!=rePasswordInput.value) {
             passwordInput.style.border = "2px solid #FF6961";
             rePasswordInput.style.border = "2px solid #FF6961";
+            passwordInput.value="";
+            rePasswordInput.value="";
             Swal.fire({
                 icon: 'error',
                 title: 'Passwords don\'t match',
