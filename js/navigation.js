@@ -203,7 +203,16 @@ document.getElementById("next3").onclick = function() {
                 confirmButton: 'custom-confirm-button'
             }
         });
-    }
+        if (!emailPattern.test(emailInput.value)) {
+            emailInput.style.border = "2px solid #FF6961";
+            Swal.fire({
+                icon: 'error',
+                title: 'Invalid Email',
+                text: 'Please enter a valid email address!',
+                customClass: {
+                    confirmButton: 'custom-confirm-button'
+                }
+            });
     } else if (!emailPattern.test(emailInput.value) || passwordInput.value!=rePasswordInput.value) {
         if(!emailPattern.test(emailInput.value)){
             emailInput.style.border = "2px solid #FF6961";
@@ -230,6 +239,7 @@ document.getElementById("next3").onclick = function() {
                 }
             });
         }
+    } 
     } else {
         document.getElementById("page3").style.display = "none";
         document.getElementById("page4").style.display = "block";
