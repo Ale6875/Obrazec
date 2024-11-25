@@ -506,7 +506,7 @@ body {
 /* For very large screens (high-res desktop monitors) */
 @media (min-width: 1440px) {
     #main {
-        width: 600px;
+        width: 500px;
     }
 
     #logo {
