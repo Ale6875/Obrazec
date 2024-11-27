@@ -14,6 +14,11 @@ document.getElementById("signInLink").onclick = function() {
     document.getElementById("page").style.display = "block";
 };
 
+document.getElementById("logBack").onclick = function() {
+    document.getElementById("page").style.display = "none";
+    document.getElementById("page0").style.display = "block";
+};
+
 document.getElementById("log").onclick = function () {
     const emailAddress = document.getElementById("emaill");
     const passwordd = document.getElementById("see");
