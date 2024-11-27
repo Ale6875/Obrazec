@@ -5,6 +5,9 @@
 
 html, body {
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 body {
@@ -17,7 +20,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: auto;
+    min-height: 100%;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 #main {
@@ -25,12 +31,6 @@ body {
     background-color: white;
     margin-top: 20px;
     margin-bottom: 20px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    overflow-y: auto;
-    transform: translate(-50%, -50%);
-    max-height: 90vh;
 }
 
 #header {
@@ -162,7 +162,24 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 61px;
+}
+
+#smtt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logBack{
+    width: 210px;
+    height: 35px;
+    border: none;
+    color: white;
+    background-color: #5473c8;
+}
+
+#logBack:hover{
+    cursor: pointer;
 }
 
 #naslov{
@@ -213,7 +230,7 @@ body {
     width: 420px;
     height: 36px;
     background-color: white;
-    border: 1px solid #c8c8c8;
+    border: 0.0625rem solid #c8c8c8;
 }
 
 #bn {
@@ -248,7 +265,7 @@ body {
 
 .back {
     background-color: white;
-    border: 1px solid #c8c8c8;
+    border: 0.0625rem solid #c8c8c8;
 }
 
 .back:hover, .next:hover {
@@ -273,21 +290,21 @@ body {
     width: 127px;
     height: 36px;
     background-color: white;
-    border: 1px solid #c1c1c1;
+    border: 0.0625rem solid #c1c1c1;
 }
 
 #month{
     width: 143px;
     height: 36px;
     background-color: white;
-    border: 1px solid #c1c1c1;
+    border: 0.0625rem solid #c1c1c1;
 }
 
 #year{
     width: 120px;
     height: 36px;
     background-color: white;
-    border: 1px solid #c1c1c1;
+    border: 0.0625rem solid #c1c1c1;
 }
 
 #about{
@@ -416,111 +433,4 @@ body {
 #dul{
     margin-bottom: 84px;
     margin-left: 15px;
-}
-
-@media (max-width: 768px) {
-    #main {
-        width: 100%;
-        padding: 20px;
-    }
-
-    #logo {
-        left: 10%;
-    }
-
-    #prof {
-        width: 80px;
-        height: 80px;
-    }
-
-    #create, #log {
-        width: 100%;
-    }
-
-    #prog {
-        flex-direction: column;
-    }
-
-    #bn {
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    .back, .next {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-}
-
-/* For small screens (smartphones) */
-@media (max-width: 480px) {
-    body {
-        font-size: 14px;
-    }
-
-    #main {
-        width: 90%;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        padding: 15px;
-    }
-
-    #header {
-        height: 50px;
-    }
-
-    #sony {
-        height: 40px;
-    }
-
-    #exit_btn {
-        right: 10px;
-    }
-
-    #pfp {
-        margin-bottom: 15px;
-    }
-
-    #create {
-        width: 100%;
-    }
-
-    #prog {
-        margin-bottom: 10px;
-    }
-
-    .dot {
-        height: 12px;
-        width: 12px;
-    }
-
-    #bn {
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    .back, .next {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-}
-
-/* For very large screens (high-res desktop monitors) */
-@media (min-width: 1440px) {
-    #main {
-        width: 500px;
-    }
-
-    #logo {
-        left: 50%;
-    }
-
-    #prof {
-        width: 120px;
-        height: 120px;
-    }
-
-    button {
-        width: 350px;
-    }
 }
