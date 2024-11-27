@@ -24,7 +24,7 @@ window.onload = function() {
         }).then((result) => {
             if (result.isConfirmed) {
                 document.getElementById("page6").style.display = "none";
-                document.getElementById("page0").style.display = "block";
+                document.getElementById("page").style.display = "block";
                 
                 document.getElementById('country').selectedIndex = 0;
                 document.getElementById('month').selectedIndex = 0;
